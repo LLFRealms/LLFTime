@@ -1,0 +1,35 @@
+######################################
+#            MySql section           #
+######################################
+MySQL:
+    database:
+        username: username # Your database username
+        password: password # Your database password
+        database: database # Your database name
+        ontimeTable: ontime-players # The ontime table name in your database
+    server:
+        port: 3306 # Your database's port number
+        address: localhost # Your database's address (IP)
+######################################
+#        Rewards setup section       #
+######################################
+# time lines up to name, please keep it exact
+rSetup:
+    time:
+        - 1
+    name: 
+        - example
+######################################
+#           Rewards section          #
+######################################
+# example
+#   rewardName:
+#       time: yes/no # time
+#       commands: /feed {player}/heal {player}/give {player} 56 1 
+# no spaces between commands, for items please use item ID and not name
+# accepted modifiers are {player} for the players name, 
+###
+rewards:
+    example:
+        time: 100 # time needed in 
+        commands: /msg {player} you have been given the reward example 

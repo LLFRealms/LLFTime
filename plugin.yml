@@ -1,0 +1,44 @@
+name: LLFTime
+author: L337Lobster
+website: http://llfrealms.com
+main: com.llfrealms.LLFTime.LLFTime
+database: true
+depend: [OnTime]
+version: 1.0
+
+commands:
+    tllfsave:
+       description: save config.
+       aliases: tls
+       permission: tllf.save
+       permission-message: You do not have permission for this command
+       usage: /<command>
+    tllfload:
+       description: reload config.
+       aliases: tll
+       permission: tllf.load
+       permission-message: You do not have permission for this command
+       usage: /<command>
+    tllfadd:
+       description: add rewards to the config.
+       aliases: tla
+       permission: tllf.add
+       permission-message: You do not have permission for this command
+       usage: /<command> {rewardName} {powerlevel} r:{requirements yes/no} r1:{req1} r2:{req2} r3:{req3} r4:{req4} {commands}
+permissions:
+    tllf.*:
+        description: Allows the user to save, reload, and add to the config
+        default: op
+        children:
+            tllf.add: true
+            tllf.save: true
+            tllf.load: true
+    tllf.add:
+        description: Allows the user to add to the config file
+        default: false
+    tllf.save:
+        description: Allows the user to save the config file
+        default: false
+    tllf.load:
+        description: Allows the user to reload the config file
+        default: false
